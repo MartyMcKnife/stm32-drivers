@@ -17,17 +17,17 @@ The library will either return `MS5607_SUCCESS` or `MS5607_FAIL` depending on th
 
 The following methods can be called:
 
-``
+```C
 MS5607_STATE get_temperature(MS5607_TEMPERATURE *temperature);
 MS5607_STATE get_pressure(MS5607_PRESSURE *pressure);
 void get_altitude(MS5607_ALTITUDE *altitude, uint32_t baseline_pressure);
-``
+```
 
 All require a reference to the corresponding struct
 
 ## Example
 
-``
+```C
   /* USER CODE BEGIN 2 */
   MS5607_Init(&hspi2, SPI2_CS_GPIO_Port, SPI2_CS_Pin);
   MS5607_ALTITUDE altitude;
@@ -42,4 +42,4 @@ All require a reference to the corresponding struct
     HAL_Delay(500);
   }
   /* USER CODE END 3 */
-``
+```
